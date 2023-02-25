@@ -43,6 +43,7 @@ chrome.storage.sync.get('apiKey', ({ apiKey }) => {
     fetch('https://api.notion.com/v1/databases', {
       headers: {
         Authorization: `Bearer ${apiKey}`,
+        'Notion-Version': '2021-08-16',
       },
     })
       .then((response) => response.json())
