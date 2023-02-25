@@ -2,23 +2,22 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Notion Extension</title>
+    <title>Github Extension</title>
     <link rel="stylesheet" href="./options.css" />
   </head>
   <body>
     <div class="container">
-    <div class="api-key-container">
-      <h1>Notion Extension</h1>
-      <div class="logo">N</div>
-      <label for="label-text">Enter your Notion API key:</label>
-      <input type="text" id="api-key-input" />
-      <button id="save-button">Save</button>
-    </div>
-     <div class="database-list-container">
-        <h1>Databases</h1>
-        <ul id="database-list"></ul>
+      <div class="api-key-container">
+        <h1>Github Extension</h1>
+        <div class="logo">N</div>
+        <label for="api-key-input">Enter your Github API key:</label>
+        <input type="text" id="api-key-input" />
+        <label for="owner-input">Enter the repository owner:</label>
+        <input type="text" id="owner-input" />
+        <label for="repo-input">Enter the repository name:</label>
+        <input type="text" id="repo-input" />
+        <button id="save-button">Save</button>
       </div>
-    </div>
     </div>
     <script src="options.js"></script>
   </body>
