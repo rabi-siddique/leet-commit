@@ -1,11 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "Notion Extension",
+  "manifest_version": 3,
+  "name": "Github Extension",
   "version": "1.0",
   "permissions": ["storage", "https://api.notion.com/*"],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
-
-  "options_page": "./options/options.html"
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  }
 }

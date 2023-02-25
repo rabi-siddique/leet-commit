@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>GitHub Commit Extension</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>GitHub Commit Extension</h1>
+        <div class="logo">GH</div>
+      </div>
+      <div class="form-container">
+        <div class="input-container">
+          <label for="directory-select">Select a directory:</label>
+          <select id="directory-select"></select>
+        </div>
+        <div class="input-container">
+          <label for="filename-input">Enter a filename:</label>
+          <input type="text" id="filename-input" placeholder="filename" />
+        </div>
+        <div class="input-container">
+          <label for="commit-message-input">Enter a commit message:</label>
+          <input
+            type="text"
+            id="commit-message-input"
+            placeholder="commit message"
+          />
+        </div>
+        <button id="commit-button">Commit</button>
+      </div>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>
