@@ -3,7 +3,7 @@ const ownerInput = document.getElementById('owner-input');
 const repoInput = document.getElementById('repo-input');
 const saveButton = document.getElementById('save-button');
 
-// Load the saved API key, owner, and repo (if any) when the options page is opened
+// Load the saved API key, owner, and repo when the options page is opened
 chrome.storage.sync.get(
   ['apiKey', 'owner', 'repo'],
   ({ apiKey, owner, repo }) => {
