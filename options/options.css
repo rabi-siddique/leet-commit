@@ -10,6 +10,13 @@ body {
 
 .container {
   display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.api-key-container,
+.database-list-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -76,4 +83,22 @@ button:disabled {
   background-color: #cccccc;
   color: #666666;
   cursor: default;
+}
+
+.database-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+.database-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }

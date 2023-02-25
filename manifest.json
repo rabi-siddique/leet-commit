@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Notion Extension",
   "version": "1.0",
-  "permissions": ["storage"],
+  "permissions": ["storage", "https://api.notion.com/*"],
   "background": {
     "scripts": ["background.js"]
   },
