@@ -25,5 +25,5 @@ const checkInput = () => {
 
 // Add event listener to the input field to check its length
 apiKeyInput.addEventListener('input', checkInput);
-
+// Check input field on page load in case the user has already entered an API key
 checkInput();
