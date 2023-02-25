@@ -13,3 +13,17 @@ saveButton.addEventListener('click', () => {
   const apiKey = apiKeyInput.value;
   chrome.storage.sync.set({ apiKey });
 });
+
+// Check if the input field is empty or contains less than 50 characters
+const checkInput = () => {
+  if (apiKeyInput.value.length === 0 || apiKeyInput.value.length < 50) {
+    saveButton.disabled = true;
+  } else {
+    saveButton.disabled = false;
+  }
+};
+
+// Add event listener to the input field to check its length
+apiKeyInput.addEventListener('input', checkInput);
+
+checkInput();
