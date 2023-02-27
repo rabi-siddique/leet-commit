@@ -1,3 +1,5 @@
+/* -------------------- Receiving Directories -------------------- */
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'send-directories') {
     const directories = request.data[0];
@@ -18,3 +20,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // with the message "send-message". The background script listens for this message.
 // And responds by sending a message to all active popups with the directories.
 chrome.runtime.sendMessage({ message: 'send-message' });
+
+/* -------------------- Receiving Code -------------------- */
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.message === 'sending-code') {
+    const code = request.data;
+  }
+});
+
+chrome.runtime.sendMessage({ message: 'send-code' });

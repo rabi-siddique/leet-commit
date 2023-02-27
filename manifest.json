@@ -9,6 +9,12 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content-script.js"]
+    }
+  ],
   "options_ui": {
     "page": "options/options.html",
     "open_in_tab": true
