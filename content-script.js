@@ -35,7 +35,7 @@ function normalizeCode(str) {
   return str;
 }
 
-async function renderButton() {
+function renderButton() {
   let button = document.createElement('div');
   button.innerText = 'Send Code';
   button.classList.add('sendCodeButton');
@@ -50,15 +50,11 @@ async function renderButton() {
 
 function sendCode() {
   const code = getCode();
-  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.message === 'send-code') {
-      chrome.runtime.sendMessage({
-        message: 'sending-code',
-        data: code,
-      });
-    }
-  });
+  chrome.storage.sync.set({ code }, () => {});
 }
+
+// Send message to background script to initiate the code sending process
+chrome.runtime.sendMessage({ message: 'initiate-sending-code' });
 
 const sendCodeButtonCSS = `
 .sendCodeButton {

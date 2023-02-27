@@ -23,10 +23,6 @@ chrome.runtime.sendMessage({ message: 'send-message' });
 
 /* -------------------- Receiving Code -------------------- */
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.message === 'sending-code') {
-    const code = request.data;
-  }
+chrome.storage.sync.get(['code'], ({ code }) => {
+  const code = code;
 });
-
-chrome.runtime.sendMessage({ message: 'send-code' });
