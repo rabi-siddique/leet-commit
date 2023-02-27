@@ -19,7 +19,7 @@ chrome.storage.sync.get(
       if (request.message === 'send-message') {
         chrome.runtime.sendMessage({
           message: 'send-directories',
-          data: directories,
+          data: [directories, apiKey],
         });
       }
     });

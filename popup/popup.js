@@ -1,6 +1,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'send-directories') {
-    const directories = request.data;
+    const directories = request.data[0];
+    const apiKey = request.data[1];
     const select = document.getElementById('directory-select');
 
     // Add each directory as an option in the select element
