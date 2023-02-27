@@ -35,17 +35,14 @@ h1 {
   color: #333333;
 }
 
-.logo {
+.logo > img {
   display: block;
   margin: 0 auto;
   width: 150px;
   height: 150px;
-  background-color: #333333;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 150px;
-  font-size: 72px;
-  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  margin-bottom: 20px;
 }
 
 label {

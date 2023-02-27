@@ -6,6 +6,12 @@
   "background": {
     "service_worker": "background.js"
   },
+  "icons": {
+    "16": "media/logo.png",
+    "32": "media/logo.png",
+    "48": "media/logo.png",
+    "128": "media/logo.png"
+  },
   "action": {
     "default_popup": "popup/popup.html"
   },
