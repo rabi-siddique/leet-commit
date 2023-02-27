@@ -13,4 +13,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
+// When the popup is opened, it sends a message to the background script
+// with the message "send-message". The background script listens for this message.
+// And responds by sending a message to all active popups with the directories.
 chrome.runtime.sendMessage({ message: 'send-message' });
