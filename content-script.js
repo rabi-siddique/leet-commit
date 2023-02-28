@@ -37,7 +37,7 @@ function normalizeCode(str) {
 
 function renderButton() {
   let button = document.createElement('div');
-  button.innerText = 'Send Code';
+  button.innerHTML = 'Add Code';
   button.classList.add('sendCodeButton');
   addCSS(sendCodeButtonCSS);
   let codePanel = document.getElementsByClassName('container__2zYY')[0];
@@ -58,23 +58,29 @@ chrome.runtime.sendMessage({ message: 'initiate-sending-code' });
 
 const sendCodeButtonCSS = `
 .sendCodeButton {
-  width: 100px;
-  height: 40px;
-  margin-right:20px;
-  padding: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #333333;
-  border: none;
-  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: 400;
+  margin: 0;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+  transition: all 0.18s ease-in-out 0s;
+  outline: 0;
   cursor: pointer;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease-in-out;
+  border: 1px solid #ff9800;
+  border-radius: 3px;
+  color: #ff9800;
+  height: 24px;
+  padding: 0 7px;
+  font-size: 12px;
+  margin-right: 25px;
 }
 
 .sendCodeButton:hover {
-  background-color: #4a4a4a;
+  background-color: #ff9800;
+  color: #fff;
 }
 
 .sendCodeButton:active {
