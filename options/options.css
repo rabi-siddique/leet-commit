@@ -14,8 +14,7 @@ body {
   gap: 80px;
 }
 
-.api-key-container,
-.database-list-container {
+.api-key-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,9 +44,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+.form-container {
+  width: 80%;
+}
+
 label {
   display: block;
   font-size: 18px;
+  font-weight: bold;
   color: #333;
   margin: 10px 0px;
 }
@@ -63,6 +67,7 @@ input[type='text'] {
 }
 
 button {
+  width: 150px;
   background-color: #333333;
   color: white;
   padding: 10px 20px;
@@ -80,22 +85,4 @@ button:disabled {
   background-color: #cccccc;
   color: #666666;
   cursor: default;
-}
-
-.database-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 600px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  max-height: 300px;
-}
-
-.database-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
 }
