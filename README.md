@@ -1,6 +1,6 @@
 ## LeetCommit
 
-This is a browser extension that allows users to quickly commit code to their GitHub repositories directly from their browser. The extension is compatible with most modern browsers, including Chrome, Firefox, and Safari.
+This is a browser extension that allows users to quickly commit their leetcode problem;s code to their GitHub repositories directly from their browser. The extension is compatible with most modern browsers, including Chrome, Firefox, and Safari.
 
 ## Features
 
