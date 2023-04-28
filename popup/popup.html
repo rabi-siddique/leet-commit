@@ -14,17 +14,23 @@
       <div class="form-container">
         <div class="input-container">
           <label for="directory-select">Select a directory:</label>
-          <select id="directory-select"></select>
+          <select id="directory-select" required></select>
         </div>
         <div class="input-container">
           <label for="filename-input">Filename:</label>
-          <input type="text" id="filename-input" placeholder="Filename" />
+          <input
+            type="text"
+            id="filename-input"
+            required
+            placeholder="Filename"
+          />
         </div>
         <div class="input-container">
           <label for="commit-message-input">Commit Message:</label>
           <input
             type="text"
             id="commit-message-input"
+            required
             placeholder="Commit Message"
           />
         </div>
